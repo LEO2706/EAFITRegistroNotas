@@ -12,3 +12,4 @@ phases:
 artifacts:
   file:
     - '**/*'
+  base-directory: './build_output'
