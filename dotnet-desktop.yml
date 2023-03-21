@@ -11,5 +11,7 @@ phases:
       - dotnet test -c Release --logger trx --results-directory ./testresults
 artifacts:
   files:
-    - ./**/*
-  base-directory: './build_output'
+    - '**/*'
+  base-directory: base_dir
+  name: build-artifact-name
+  discard-paths: no
