@@ -45,15 +45,15 @@ namespace RegistroNotas.Services.NotaR
 
       if (valorNota > 5)
       {
-        return $"Hay un error de datos, el valor de la nota ({valorNota}), es superio a 5.00";
+        return $"Ok.Hay un error de datos, el valor de la nota ({valorNota}), es superio a 5.00";
       }
 
       if (Porcetanje > 100)
       {
-        return $"Hay un error de datos, el porcentaje acumulado de todas las notas ({Porcetanje}), es superio a 100.00";
+        return $"Ok.Hay un error de datos, el porcentaje acumulado de todas las notas ({Porcetanje}), es superio a 100.00";
       }
 
-      return $"Estudiante --> {estudianteActual.Nombre}. La nota  de la materia {materiaActual.Nombre} es: {valorNota} --> Total Evaluado {Porcetanje}%";
+      return $"Ok.Estudiante --> {estudianteActual.Nombre}. La nota  de la materia {materiaActual.Nombre} es: {valorNota} --> Total Evaluado {Porcetanje}%";
     }
   }
 }

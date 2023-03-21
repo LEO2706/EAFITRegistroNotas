@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroNotas", "RegistroNo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseProyecto", "DataBaseProyecto\DataBaseProyecto.csproj", "{36B96CAA-4301-402B-B9CC-490873B2DF25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{4C42DB94-EABE-4529-9EAE-57E41C5E6653}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitestProyecto", "UnitestProyecto\UnitestProyecto.csproj", "{A9F2B7F9-4D30-471D-B1FF-2576115680A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{36B96CAA-4301-402B-B9CC-490873B2DF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B96CAA-4301-402B-B9CC-490873B2DF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B96CAA-4301-402B-B9CC-490873B2DF25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C42DB94-EABE-4529-9EAE-57E41C5E6653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C42DB94-EABE-4529-9EAE-57E41C5E6653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C42DB94-EABE-4529-9EAE-57E41C5E6653}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C42DB94-EABE-4529-9EAE-57E41C5E6653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F2B7F9-4D30-471D-B1FF-2576115680A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F2B7F9-4D30-471D-B1FF-2576115680A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F2B7F9-4D30-471D-B1FF-2576115680A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F2B7F9-4D30-471D-B1FF-2576115680A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

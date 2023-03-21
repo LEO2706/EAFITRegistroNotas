@@ -12,6 +12,7 @@ namespace RegistroNotas.Services.EstudiantesR
     {
       _context = dbcontext;
     }
+
     public IEnumerable<Estudiante> GetMostrarEstudiantes()
     {
       return _context.Estudiantes;
@@ -22,9 +23,9 @@ namespace RegistroNotas.Services.EstudiantesR
       _context.Add(estudiante);
       await _context.SaveChangesAsync();
     }
-    public Estudiante GetFindEstudiante(int Id_Estudiante)
+    public Estudiante GetFindEstudiante(int Id)
     {
-      var estudianteActual = _context.Estudiantes.Find(Id_Estudiante);
+      var estudianteActual = _context.Estudiantes.Find(Id);
 
       return estudianteActual;
     }
