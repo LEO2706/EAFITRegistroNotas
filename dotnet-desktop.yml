@@ -1,16 +1,15 @@
 version: 0.2
-
-env:
-  variables:
-    PROJECT: RegistroNotas
-    dotnet-version: 7.2.x
 phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore
   build:
     commands:
       - echo Build started on `date`
       - dotnet build -c Release
-      - dotnet test -c Release --logger trx --results-directory ./testresultse
+      - dotnet test -c Release --logger trx --results-directory ./testresults
 artifacts:
-  files:
+  file:
     - '**/*'
-  base-directory: 'C:\codebuild\artifacts\_PublishedWebsites\${env:PROJECT}_Package\Archive\'
+  base-directory: './build_output'
