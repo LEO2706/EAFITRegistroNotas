@@ -7,7 +7,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build -c release
+      - dotnet build -c Release
+      - dotnet test -c Release --logger trx --results-directory ./testresults
 artifacts:
   files:
     - ./**/*
