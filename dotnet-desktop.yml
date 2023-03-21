@@ -48,7 +48,7 @@ jobs:
       file:
         - '**/*'
       base-directory: base_dir
-      name: build-artifact-name
+      name: builds/$CODEBUILD_BUILD_NUMBER/my-artifacts
       discard-paths: no
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
