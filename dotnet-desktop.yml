@@ -9,3 +9,6 @@ phases:
       - echo Build started on `date`
       - dotnet build -c Release
       - dotnet test -c Release --logger trx --results-directory ./testresults
+artifacts:
+  file:
+    - '**/*'
