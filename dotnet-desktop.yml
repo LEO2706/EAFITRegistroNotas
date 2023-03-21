@@ -43,6 +43,10 @@ jobs:
     # Execute all unit tests in the solution
     - name: Execute unit tests
       run: dotnet test
+      
+    artifacts:
+      file:
+        - '**/*'
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     #- name: Decode the pfx
