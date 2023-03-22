@@ -1,0 +1,24 @@
+project:
+  name: RegistroNotas
+  owner: luis.olaya1223@gmail.com
+  package_lambda: false
+  regions:
+  - eu-west-1
+  - us-east-1
+  - us-east-2
+  - us-west-2
+tests:
+  dotnet:
+    parameters:
+      GitHubRepositoryName: RegistroNotas
+      GitHubBranchName: master
+      GitHubOwner: LEO2706
+      GitHubOAuthToken: github-token
+      CodeBuildImage: aws/codebuild/amazonlinux2-x86_64-standard:4.0
+      SolutionStack: 64bit Amazon Linux 2 v2.5.1 running .NET Core
+    regions:
+    - eu-west-1
+    - us-east-1
+    - us-east-2
+    - us-west-2
+    template: templates/quickstart-dotnetcore-cicd.template.yaml
