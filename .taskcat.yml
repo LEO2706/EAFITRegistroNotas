@@ -13,7 +13,7 @@ tests:
       GitHubRepositoryName: RegistroNotas
       GitHubBranchName: master
       GitHubOwner: LEO2706
-      GitHubOAuthToken: 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
+      GitHubOAuthToken: github-token
       CodeBuildImage: aws/codebuild/amazonlinux2-x86_64-standard:4.0
       SolutionStack: 64bit Amazon Linux 2 v2.5.1 running .NET Core
     regions:
