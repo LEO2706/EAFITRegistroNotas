@@ -1,4 +1,10 @@
 version: 0.2
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
+  inputs:
+    packageType: 'sdk'
+    version: '7.0.x'
+    includePreviewVersions: true
 phases:
   pre_build:
     commands:
