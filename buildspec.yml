@@ -10,5 +10,5 @@ phases:
       - dotnet Build -c release
 artifacts:
   files:
-    - .\**\*
+    - ./**/*
   # base-directory: '.\build_output'
