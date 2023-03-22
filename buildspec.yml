@@ -1,12 +1,12 @@
 version: 0.2
-- task: UseDotNet@2
-  displayName: 'Use .NET Core sdk'
-  inputs:
-    packageType: 'sdk'
-    version: '7.0.x'
-    includePreviewVersions: true
 phases:
   pre_build:
+    steps:
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x  
     commands:
       - echo Restore started on `date`
       - dotnet restore RegistroNotas/RegistroNotas.csproj
