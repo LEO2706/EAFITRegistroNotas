@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build -c release
+      - dotnet Build -c release
 artifacts:
   files:
     - ./**/*
