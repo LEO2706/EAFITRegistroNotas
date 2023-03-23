@@ -10,18 +10,18 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore RegistroNotas.csproj
+      - dotnet restore RegistroNotas/RegistroNotas.csproj
       
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build RegistroNotas.csproj
+      - dotnet build RegistroNotas/RegistroNotas.csproj
       
   post_build:
     commands:
       - echo Publish started on `date`
       # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
-      - dotnet publish -c Release -r linux-x64 --self-contained false RegistroNotas.csproj
+      - dotnet publish -c Release -r linux-x64 --self-contained false RegistroNotas/RegistroNotas.csproj
       
 artifacts:
   files:
