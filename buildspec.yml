@@ -17,9 +17,9 @@ jobs:
         
     env:
       Solution_Name: RegistroNotas.sln
-      Test_Project_Path: UnitestProyecto\UnitestProyecto.csproj
+      Test_Project_Path: UnitestProyecto/UnitestProyecto.csproj
       Wap_Project_Directory: RegistroNotas
-      Wap_Project_Path: RegistroNotas\RegistroNotas.csproj
+      Wap_Project_Path: RegistroNotas/RegistroNotas.csproj
 
     steps:
     - name: Checkout
