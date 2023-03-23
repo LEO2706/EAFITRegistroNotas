@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore ./RegistroNotas/RegistroNotas.csproj
+      - dotnet restore *./RegistroNotas/RegistroNotas.csproj
       
   build:
     commands:
