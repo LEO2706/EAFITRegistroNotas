@@ -1,29 +1,52 @@
 version: 0.2
-    
-phases:
-  install:
-    runtime-versions:
-      dotnet: 6.0
-      #dotnet: latest - Latest resolve to 3.1, check this issue https://github.com/aws/aws-codebuild-docker-images/issues/414
-   
-  pre_build:
-    commands:
-      - echo Restore started on `date`
-      - dotnet restore *./RegistroNotas/RegistroNotas.csproj
-      
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
   build:
-    commands:
-      - echo Build started on `date`
-      - dotnet build ./RegistroNotas/RegistroNotas.csproj
-      - echo Test started on `date`
-      - dotnet test ./UnitestProyecto/UnitestProyecto.csproj
-      
-  post_build:
-    commands:
-      - echo Publish started on `date`
-      # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
-      - dotnet publish -c Release -r linux-x64 -o ./RegistroNotas/RegistroNotas.csproj
-      
+
+    strategy:
+      matrix:
+        configuration: [Release]
+        
+    env:
+      Solution_Name: RegistroNotas.sln
+      Test_Project_Path: UnitestProyecto/UnitestProyecto.csproj
+      Wap_Project_Directory: RegistroNotas
+      Wap_Project_Path: RegistroNotas/RegistroNotas.csproj
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.202
+
+    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    # Execute all unit tests in the solution
+    - name: Execute unit tests
+      run: dotnet test
+
+    # Restore the application to populate the obj folder with RuntimeIdentifiers
+    - name: Restore the application
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
+        
 artifacts:
   files:
-    - ./**/*
+    - ./**/*/
