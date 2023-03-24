@@ -2,15 +2,14 @@
 # AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
 version: 0.2
 
-steps:
-- checkout: self
-  lfs: true
-
 phases:
   install:
     runtime-versions:
       dotnet: 6.0
       #dotnet: latest - Latest resolve to 3.1, check this issue https://github.com/aws/aws-codebuild-docker-images/issues/414
+    commands:
+      - echo Installing Entity Framework Core tools reference - .NET CLI
+      - dotnet tool install --global dotnet-ef
    
   pre_build:
     commands:
