@@ -2,5 +2,6 @@ version: 0.2
 phases:
   build:
     commands:
+      - dotnet new webapp -f net6.0
       - dotnet restore RegistroNotas.sln
       - dotnet build RegistroNotas.sln
