@@ -10,6 +10,7 @@ phases:
     commands:
       - echo Installing Entity Framework Core tools reference - .NET CLI
       - echo Installing MySql.EntityFrameworkCore - .NET CLI
+      - echo Installing MySql.Data.EntityFrameworkCore - .NET CLI
    
   pre_build:
     commands:
