@@ -11,7 +11,7 @@ phases:
       - echo Installing Entity Framework Core tools reference - .NET CLI
       - echo Installing MySql.EntityFrameworkCore reference  - .NET CLI
       - echo Installing MySql.Data.EntityFrameworkCore reference  - .NET CLI
-      - dotnet add package mysql.data --version 8.0.32
+      - echo Installing --global dotnet-ef reference  - .NET CLI
    
   pre_build:
     commands:
@@ -23,7 +23,7 @@ phases:
       - echo ASPNETCORE_ENVIRONMENT is $ASPNETCORE_ENVIRONMENT
       - echo $ConnectionStrings__DBContext
       - echo Info about dbcontext
-      # - dotnet ef dbcontext info
+      - dotnet ef dbcontext info
       
   build:
     commands:
