@@ -19,6 +19,10 @@ phases:
       - dotnet nuget locals global-packages --clear 
       - dotnet nuget locals http-cache --clear
       - dotnet restore
+      - echo ASPNETCORE_ENVIRONMENT is $ASPNETCORE_ENVIRONMENT
+      - echo $ConnectionStrings__DBContext
+      - echo Info about dbcontext
+      - dotnet ef dbcontext info
       
   build:
     commands:
@@ -26,6 +30,8 @@ phases:
       - dotnet build RegistroNotas/RegistroNotas.csproj
       - echo Test started on `date`
       - dotnet test RegistroNotas/RegistroNotas.csproj
+      - echo Update database on `date`
+      - dotnet ef database update
       
   post_build:
     commands:
