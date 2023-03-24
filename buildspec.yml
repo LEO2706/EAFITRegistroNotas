@@ -12,6 +12,8 @@ phases:
     commands:
       - echo Restore started on `date`
       - dotnet nuget locals all --clear
+      - dotnet nuget locals global-packages --clear 
+      - dotnet nuget locals http-cache --clear
       - dotnet restore
       
   build:
