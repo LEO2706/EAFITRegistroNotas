@@ -11,6 +11,7 @@ phases:
       - echo Installing Entity Framework Core tools reference - .NET CLI
       - echo Installing MySql.EntityFrameworkCore reference  - .NET CLI
       - echo Installing MySql.Data.EntityFrameworkCore reference  - .NET CLI
+      - dotnet add package mysql.data --version 8.0.32
    
   pre_build:
     commands:
