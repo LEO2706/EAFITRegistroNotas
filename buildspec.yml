@@ -9,9 +9,9 @@ phases:
       #dotnet: latest - Latest resolve to 3.1, check this issue https://github.com/aws/aws-codebuild-docker-images/issues/414
     commands:
       - echo Installing Entity Framework Core tools reference - .NET CLI
-      - echo Installing MySql.EntityFrameworkCore reference  - .NET CLI
-      - echo Installing MySql.Data.EntityFrameworkCore reference  - .NET CLI
-      - echo Installing --global dotnet-ef reference  - .NET CLI
+      # - echo Installing MySql.EntityFrameworkCore reference  - .NET CLI
+      # - echo Installing MySql.Data.EntityFrameworkCore reference  - .NET CLI
+      # - echo Installing --global dotnet-ef reference  - .NET CLI
    
   pre_build:
     commands:
