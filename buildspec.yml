@@ -23,7 +23,7 @@ phases:
       - echo ASPNETCORE_ENVIRONMENT is $ASPNETCORE_ENVIRONMENT
       - echo $ConnectionStrings__DBContext
       - echo Info about dbcontext
-      - dotnet ef dbcontext info
+      - echo ef dbcontext info
       
   build:
     commands:
@@ -32,7 +32,7 @@ phases:
       - echo Test started on `date`
       - dotnet test RegistroNotas/RegistroNotas.csproj
       - echo Update database on `date`
-      - dotnet ef database update
+      # - dotnet ef database update
       
   post_build:
     commands:
