@@ -14,6 +14,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <None Include=".ebextensions\alb-default-process.config" CopyToOutputDirectory="Always" />
+    <None Include=".ebextensions\env.config" CopyToOutputDirectory="Always" />
+    <None Include=".ebextensions\logging.config" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
   <ItemGroup>
