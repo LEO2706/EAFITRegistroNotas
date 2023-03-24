@@ -22,7 +22,7 @@ phases:
       - echo ASPNETCORE_ENVIRONMENT is $ASPNETCORE_ENVIRONMENT
       - echo $ConnectionStrings__DBContext
       - echo Info about dbcontext
-      - dotnet ef dbcontext info
+      # - dotnet ef dbcontext info
       
   build:
     commands:
